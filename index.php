@@ -20,7 +20,7 @@ include_once ("./function/connectionPDO.php");
             $result = $db -> query($requete);
             while($donnees=$result->fetch()) {
 
-                echo("<option value=" . $donnees['id_Salle'].">" .$donnees['T_NomSalle'] . "</option>");
+                echo("<option value=" . $donnees['id_Salle'].">" .$donnees['T_NomSalle'] ." ".($donnees['NbrPlace']." places"). "</option>");
 
 
             }

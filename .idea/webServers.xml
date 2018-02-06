@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="adfd87a2-2d00-44fc-b9df-4350dbd038a6" name="salleReunion" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\salleReunion" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

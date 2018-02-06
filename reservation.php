@@ -11,9 +11,9 @@ if(isset($_POST['reservation'])){
     } else {
         $requete = "INSERT INTO `t_reservation` (`id_RESERVATION`, `DATE`, `T_Salle_id_Salle`,`Duree`) VALUES (NULL, '$date', '$salle','$duree')";
         $result = $db ->query($requete);
-        echo "Merci de votre réservation";
+            echo "Merci de votre réservation";
+        }
 
-    }
 
 }else {
     echo "erreur";
