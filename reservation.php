@@ -9,6 +9,7 @@ if(isset($_POST['reservation'])){
     if($salle==0 || $duree==0 || $date==0){
         echo "Veuillez bien remplir le formulaire";
     } else {
+
         $requete = "INSERT INTO `t_reservation` (`id_RESERVATION`, `DATE`, `T_Salle_id_Salle`,`Duree`) VALUES (NULL, '$date', '$salle','$duree')";
         $result = $db ->query($requete);
             echo "Merci de votre réservation";
