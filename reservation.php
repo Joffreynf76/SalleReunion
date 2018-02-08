@@ -1,8 +1,8 @@
 <?php
 
-if(isset($_POST['reservation'])){
+if(isset($_POST['action'])){
     include_once ("./function/connectionPDO.php");
-    $db=connectionPDO('localhost' , 'salle' , 'root' , '');
+    $db=connectionPDO('localhost' , 'reservation' , 'root' , '');
     $salle=$_POST['salle'];
     $date=$_POST['date'];
     $duree = $_POST['duree'];
