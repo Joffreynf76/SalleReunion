@@ -13,11 +13,7 @@ include_once ("./function/connectionPDO.php");
             <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 
-            <script> $(document).ready(function() {
-                    $('select').material_select();
-                });
 
-                </script>
         </head>
 
         <body>
@@ -49,7 +45,10 @@ include_once ("./function/connectionPDO.php");
                 </div>
 
 
+
         </div>
+
+
         <div class="input-field col s12">
             <select name="salle1">
                 <option value="" disabled selected>Choose your option</option>
@@ -87,6 +86,11 @@ include_once ("./function/connectionPDO.php");
 
 
         <script type="text/javascript" src="./assets/js/materialize.min.js"></script>
+        <script> $(document).ready(function() {
+                $('select').material_select();
+            });
+
+        </script>
         <script> $('.timepicker').pickatime({
                 default: 'now', // Set default time: 'now', '1:30AM', '16:30'
                 fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')

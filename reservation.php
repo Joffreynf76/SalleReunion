@@ -6,7 +6,7 @@ if(isset($_POST['action'])){
     $nom=$_POST['nom'];
     $prenom=$_POST['prenom'];
     $email=$_POST['email'];
-    //$salle = $_POST['salle1'];
+    $salle = $_POST['salle1'];
     $date=$_POST['date'];
     $heure = $_POST['heure'];
     $place=$_POST['place'];
