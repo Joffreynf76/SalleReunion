@@ -3,15 +3,19 @@
 if(isset($_POST['action'])){
     include_once ("./function/connectionPDO.php");
     $db=connectionPDO('localhost' , 'reservation' , 'root' , '');
-    $salle=$_POST['salle'];
+    $nom=$_POST['nom'];
+    $prenom=$_POST['prenom'];
+    $email=$_POST['email'];
+    //$salle = $_POST['salle1'];
     $date=$_POST['date'];
-    $duree = $_POST['duree'];
-    if($salle==0 || $duree==0 || $date==0){
+    $heure = $_POST['heure'];
+    $place=$_POST['place'];
+    if( $date=="" || $heure=="" || $place==""){
         echo "Veuillez bien remplir le formulaire";
     } else {
-
-        $requete = "INSERT INTO `t_reservation` (`id_RESERVATION`, `DATE`, `T_Salle_id_Salle`,`Duree`) VALUES (NULL, '$date', '$salle','$duree')";
-        $result = $db ->query($requete);
+        $requete2= "INSERT INTO t_users (id_USERS,USERNAME,USERFNAME,USERMAIL) VALUES (NULL,'$nom','$prenom','$email')";
+        //$requete = "INSERT INTO `t_reservation` (`T_USERS_id_USERS`, `T_ROOM_id_ROOM`, `HEUREDEBUT`,`DUREE`,`NBRPLACE`) VALUES (NULL, '$salle', '$date','$heure','$place')";
+        $result = $db ->query($requete2);
             echo "Merci de votre réservation";
         }
 

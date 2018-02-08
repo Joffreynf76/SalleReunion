@@ -26,11 +26,7 @@ include_once ("./function/connectionPDO.php");
         <nav>
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo">Réservation de salle</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
-                </ul>
+
             </div>
         </nav>
         <div class="row">
@@ -38,11 +34,11 @@ include_once ("./function/connectionPDO.php");
                 <div class="row">
                     <div class="input-field col s6">
                         <input type="text" class="validate" name="nom">
-                        <label for="first_name">Nom</label>
+                        <label for="nom">Nom</label>
                     </div>
                     <div class="input-field col s6">
                         <input type="text" class="validate" name="prenom">
-                        <label for="last_name">Prénom</label>
+                        <label for="prenom">Prénom</label>
                     </div>
                 </div>
                 <div class="row">
@@ -55,7 +51,7 @@ include_once ("./function/connectionPDO.php");
 
         </div>
         <div class="input-field col s12">
-            <select>
+            <select name="salle1">
                 <option value="" disabled selected>Choose your option</option>
                 <?php
                 $db = connectionPDO('localhost','reservation','root','');
@@ -69,13 +65,17 @@ include_once ("./function/connectionPDO.php");
             <label>Sélection de salle</label>
         </div>
             <div class="input-field col s12">
-            <input type="datetime-local" class="datepicker">
-            <label for="date">Date</label>
+                <input type="text" class="datepicker" name="date">
+                <label for="date">Date</label>
         </div>
         <div class="input-field col s12">
-            <input type="text" class="timepicker">
+            <input type="text" class="timepicker" name="heure">
             <label for="heure">Heure</label>
         </div>
+            <div class="input-field col s12">
+                <input type="text" class="" name="place">
+                <label for="place">Nombre de place</label>
+            </div>
 
         <button class="btn waves-effect waves-light" type="submit" name="action">Réserver</button>
         </form>
